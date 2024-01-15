@@ -10,6 +10,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.shegz.flexibletextsize.compose.flexibleFontSize
 import com.shegz.flexibletextsize.ui.theme.FlexibleTextSizeTheme
 
 class MainActivity : ComponentActivity() {
@@ -33,7 +34,8 @@ class MainActivity : ComponentActivity() {
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Text(
         text = "Hello $name!",
-        modifier = modifier
+        modifier = modifier,
+        fontSize = MaterialTheme.typography.bodyLarge.fontSize.flexibleFontSize(min = 16F, max = 24F )
     )
 }
 
